@@ -12,6 +12,11 @@ public class MainMenu : MonoBehaviour{
 
 
     }
+
+    public void StartAirPollutionMiniGame(){
+        SceneManager.LoadScene("AirPollutionMiniGame1");
+    }
+
     public void QuitGame(){
         
         Debug.Log("QUIT!");
