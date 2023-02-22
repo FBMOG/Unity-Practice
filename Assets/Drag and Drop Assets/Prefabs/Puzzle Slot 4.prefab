@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1473075891978606226, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b2d0430e6ba73a48a1e9372b8014114, type: 3}
+    - target: {fileID: 1473075891978606226, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
@@ -32,12 +36,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4977898020489531209, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977898020489531209, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977898020489531209, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977898020489531209, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.48
+      value: -3.4158783
       objectReference: {fileID: 0}
     - target: {fileID: 4977898020489531209, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.74
+      value: 1.2673795
       objectReference: {fileID: 0}
     - target: {fileID: 4977898020489531209, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -73,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5120176440411151544, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
       propertyPath: m_Name
-      value: Puzzle Slot 1
+      value: Puzzle Slot 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}
@@ -192,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Renderer: {fileID: 8325398902792274915}
   _source: {fileID: 1906061261309068656}
-  completedClip: {fileID: 0}
+  completedClip: {fileID: 8300000, guid: 92d4af24f3343274092071cbc35291ef, type: 3}
 --- !u!212 &8325398902792274915 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1473075891978606226, guid: ccee121eb05cadc4ab9aa6d2fb01a69a, type: 3}

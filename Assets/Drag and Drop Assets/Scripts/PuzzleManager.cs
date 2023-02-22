@@ -17,13 +17,13 @@ public class PuzzleManager : MonoBehaviour
     }
 
     void Spawn() {
-        var randomSet = slotPrefabs.OrderBy(s=>Random.value).Take(3).ToList();
+        var randomSet = slotPrefabs.ToList();
         spawnedPieces = new List<PuzzlePiece>();
 
         for(int i = 0; i < randomSet.Count; i++){
             var spawnedSlot = Instantiate(randomSet[i], slotParent.GetChild(i).position, Quaternion.identity);
         
-            var spawnedPiece =  Instantiate(_piecePrefab, pieceParent.GetChild(i).position, Quaternion.identity);
+            var spawnedPiece =  Instantiate(_piecePrefab, pieceParent.GetChild((i+1)%4).position, Quaternion.identity);
             spawnedPiece.Init(spawnedSlot);
             spawnedPieces.Add(spawnedPiece);
         }
