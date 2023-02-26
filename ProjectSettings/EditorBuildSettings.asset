@@ -8,10 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start Menu.unity
     guid: 2cb3111d2bd7ec14e84abdb03d796c0f
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/AirPollutionMiniGame1.unity
     guid: d65c83370089d9146af571cbfba704ee
+  - enabled: 1
+    path: Assets/Scenes/LandPollutionCauses.unity
+    guid: 44bd3789aed6dd3458afd71126498a9b
+  - enabled: 1
+    path: Assets/Scenes/LandPollutionEffects.unity
+    guid: 2a0060eb688d60e428e7a1b1c5e4db50
   m_configObjects: {}

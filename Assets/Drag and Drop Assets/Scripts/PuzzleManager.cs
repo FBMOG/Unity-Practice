@@ -37,6 +37,6 @@ public class PuzzleManager : MonoBehaviour
 
     void ChangeScene() {
         
-        SceneManager.LoadScene("Start Menu");
+        SceneManager.LoadScene("LandPollutionEffects");
     }
 }
