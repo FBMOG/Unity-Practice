@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Start Menu.unity
     guid: 2cb3111d2bd7ec14e84abdb03d796c0f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/AirPollutionMiniGame1.unity
-    guid: d65c83370089d9146af571cbfba704ee
+    path: Assets/Scenes/AirPollutionCauses.unity
+    guid: b5df681c7b7de0044b9cbd610db01176
+  - enabled: 1
+    path: Assets/Scenes/WaterPollutionQuiz.unity
+    guid: 462c929007ca95c4cb107db265d26575
+  - enabled: 1
+    path: Assets/Scenes/AirPollutionFlappyBird.unity
+    guid: 4a671ab9c9e9a3d438913a0533cd4e74
   - enabled: 1
     path: Assets/Scenes/LandPollutionCauses.unity
     guid: 44bd3789aed6dd3458afd71126498a9b

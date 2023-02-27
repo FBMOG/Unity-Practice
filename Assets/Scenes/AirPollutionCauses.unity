@@ -2349,14 +2349,13 @@ GameObject:
   - component: {fileID: 535094104}
   - component: {fileID: 535094107}
   - component: {fileID: 535094106}
-  - component: {fileID: 535094105}
   m_Layer: 5
   m_Name: SecondInfoPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &535094104
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2379,18 +2378,6 @@ RectTransform:
   m_AnchoredPosition: {x: -532, y: 161}
   m_SizeDelta: {x: -1124.5592, y: -684.2778}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &535094105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535094103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67dca70da753c164ebd43b238aef0a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &535094106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3358,7 +3345,6 @@ GameObject:
   - component: {fileID: 838519353}
   - component: {fileID: 838519352}
   - component: {fileID: 838519351}
-  - component: {fileID: 838519350}
   m_Layer: 5
   m_Name: BikeHandlePanel
   m_TagString: Untagged
@@ -3366,18 +3352,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &838519350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838519349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67dca70da753c164ebd43b238aef0a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &838519351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4627,7 +4601,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1112783855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1650653533}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: StartWaterPollutionCauses
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1112783855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4947,7 +4933,6 @@ GameObject:
   - component: {fileID: 1221070829}
   - component: {fileID: 1221070832}
   - component: {fileID: 1221070831}
-  - component: {fileID: 1221070830}
   m_Layer: 5
   m_Name: CarHandlePanel
   m_TagString: Untagged
@@ -4977,18 +4962,6 @@ RectTransform:
   m_AnchoredPosition: {x: -7.679199, y: 356.4811}
   m_SizeDelta: {x: -55.9619, y: -878.4258}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1221070830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221070828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67dca70da753c164ebd43b238aef0a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1221070831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5768,7 +5741,6 @@ GameObject:
   - component: {fileID: 1338502928}
   - component: {fileID: 1338502930}
   - component: {fileID: 1338502929}
-  - component: {fileID: 1338502931}
   m_Layer: 5
   m_Name: FirstQuestionPanel
   m_TagString: Untagged
@@ -5835,18 +5807,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338502927}
   m_CullTransparentMesh: 1
---- !u!114 &1338502931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338502927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67dca70da753c164ebd43b238aef0a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1433108949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6463,6 +6423,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620415977}
   m_CullTransparentMesh: 1
+--- !u!1 &1650653532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1650653534}
+  - component: {fileID: 1650653533}
+  m_Layer: 0
+  m_Name: MainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1650653533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650653532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0ff117c473b5040a9c02c9d3875f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1650653534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650653532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 845.98926, y: 532.3972, z: -29.65059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659801154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8267,26 +8271,13 @@ GameObject:
   - component: {fileID: 1964153734}
   - component: {fileID: 1964153733}
   - component: {fileID: 1964153732}
-  - component: {fileID: 1964153731}
   m_Layer: 5
   m_Name: FirstQuestionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1964153731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964153730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67dca70da753c164ebd43b238aef0a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 0
 --- !u!114 &1964153732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8841,7 +8832,6 @@ GameObject:
   - component: {fileID: 2117856990}
   - component: {fileID: 2117856993}
   - component: {fileID: 2117856992}
-  - component: {fileID: 2117856991}
   m_Layer: 5
   m_Name: OptionsSelectPromptPanel
   m_TagString: Untagged
@@ -8870,18 +8860,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 310}
   m_SizeDelta: {x: -326.0955, y: -951.0844}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2117856991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117856989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67dca70da753c164ebd43b238aef0a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2117856992
 MonoBehaviour:
   m_ObjectHideFlags: 0
