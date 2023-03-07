@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && birdIsAlive == true) {
+        if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive == true) {
             direction = Vector3.up * strength;
         }
 
