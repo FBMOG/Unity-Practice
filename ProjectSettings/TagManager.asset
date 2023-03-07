@@ -8,6 +8,10 @@ TagManager:
   - PuzzleButton
   - Boundary
   - Waste
+  - Obstacle
+  - Scoring
+  - Spawner
+  - Pipes
   layers:
   - Default
   - TransparentFX
