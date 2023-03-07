@@ -16,14 +16,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Pause();
         Application.targetFrameRate = 60;
 
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
         play.SetActive(true);
 
-        
+        Pause();
     }
 
     public void Play()
@@ -55,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        restartGame();
+    
         Time.timeScale = 0f;
         player.enabled = false;
     }
