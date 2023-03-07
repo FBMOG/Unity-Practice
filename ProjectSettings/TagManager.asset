@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Trash
   - PuzzleButton
+  - Boundary
+  - Waste
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - -1
   - Water
   - UI
   - 
