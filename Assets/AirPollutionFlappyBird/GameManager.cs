@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private Player player;
-    private Spawner spawner;
+    public Player player;
+    public Spawner spawner;
 
     public TMP_Text scoreText;
     public GameObject playButton;
+    public GameObject replayButton;
     public GameObject gameOver;
     public GameObject play;
     public int score { get; private set; }
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
         play.SetActive(true);
+        replayButton.SetActive(false);
 
         Pause();
     }
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         playButton.SetActive(false);
         gameOver.SetActive(false);
         play.SetActive(false);
+        replayButton.SetActive(false);
 
         Time.timeScale = 1f;
         player.enabled = true;
@@ -46,7 +49,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        playButton.SetActive(true);
+        //playButton.SetActive(true);
+        replayButton.SetActive(true);
         gameOver.SetActive(true);
 
         Pause();
@@ -58,6 +62,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         player.enabled = false;
     }
+
+
 
     public void IncreaseScore()
     {

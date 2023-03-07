@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
         transform.eulerAngles = rotation;
     }
 
+
+
     private void AnimateSprite()
     {
         spriteIndex++;
@@ -62,6 +64,13 @@ public class Player : MonoBehaviour
         } else if (other.gameObject.CompareTag("Scoring")) {
             FindObjectOfType<GameManager>().IncreaseScore();
         }
+    }
+
+    public void OnEnable(){
+        Vector3 position = transform.position;
+        position.y = 0f;
+        transform.position = position;
+        direction = Vector3.zero;
     }
 
 }
