@@ -8,6 +8,13 @@ TagManager:
   - PuzzleButton
   - Boundary
   - Waste
+  - Obstacle
+  - Scoring
+  - Spawner
+  - Pipes
+  - Plastic
+  - Paper
+  - Metal
   layers:
   - Default
   - TransparentFX
