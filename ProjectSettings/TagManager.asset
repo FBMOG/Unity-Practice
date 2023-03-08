@@ -12,6 +12,9 @@ TagManager:
   - Scoring
   - Spawner
   - Pipes
+  - Plastic
+  - Paper
+  - Metal
   layers:
   - Default
   - TransparentFX
