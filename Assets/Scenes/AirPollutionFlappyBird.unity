@@ -579,7 +579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Help the bird dodge the factory chimneys inorder to survive!
+  m_text: Press SpaceBar to help the bird dodge the factory chimneys inorder to survive!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4eaf604a70240a409c4fd745bc0db57, type: 2}
   m_sharedMaterial: {fileID: 5675200578937348870, guid: e4eaf604a70240a409c4fd745bc0db57, type: 2}
