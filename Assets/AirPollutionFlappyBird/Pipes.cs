@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Pipes : MonoBehaviour
 {
     public Transform top;
@@ -20,6 +21,10 @@ public class Pipes : MonoBehaviour
         if (transform.position.x < leftEdge) {
             Destroy(gameObject);
         }
+    }
+
+    public void setSpeed(int pipeSpeed){
+        speed = pipeSpeed;
     }
 
 }
