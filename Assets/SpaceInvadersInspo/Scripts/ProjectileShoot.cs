@@ -5,6 +5,10 @@ using UnityEngine;
 public class ProjectileShoot : MonoBehaviour
 {
     public GameObject projectilePrefab;
+    public bool shootReady;
+    public float shootCD = 1.99f;
+    public float shootCDCurrent = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +18,24 @@ public class ProjectileShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+
+        //Shooting input
+
+        if(shootCDCurrent >= shootCD){
+            shootReady = true;
+        }
+        
+        else{
+            shootCDCurrent = shootCDCurrent + Time.deltaTime;
+            shootReady = false;
+        }
+
+        if(Input.GetButtonDown("Fire1") && shootReady)
         {
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            shootCDCurrent = 0.0f;
         }
+
     }
 
     

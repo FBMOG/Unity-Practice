@@ -15,6 +15,7 @@ TagManager:
   - Plastic
   - Paper
   - Metal
+  - ProjectileBoundary
   layers:
   - Default
   - TransparentFX
