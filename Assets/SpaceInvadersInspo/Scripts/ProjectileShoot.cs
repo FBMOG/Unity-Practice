@@ -8,6 +8,7 @@ public class ProjectileShoot : MonoBehaviour
     public bool shootReady;
     public float shootCD = 1.99f;
     public float shootCDCurrent = 0.0f;
+    private GameObject dummyProjectile;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +33,9 @@ public class ProjectileShoot : MonoBehaviour
 
         if(Input.GetButtonDown("Fire1") && shootReady)
         {
-            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            dummyProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             shootCDCurrent = 0.0f;
+            Destroy(dummyProjectile, 0.7f);
         }
 
     }
