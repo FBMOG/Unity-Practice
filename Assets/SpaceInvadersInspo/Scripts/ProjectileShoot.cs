@@ -35,7 +35,7 @@ public class ProjectileShoot : MonoBehaviour
         {
             dummyProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             shootCDCurrent = 0.0f;
-            Destroy(dummyProjectile, 0.7f);
+            Destroy(dummyProjectile, 1.5f);
         }
 
     }

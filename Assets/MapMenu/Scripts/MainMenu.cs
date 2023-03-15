@@ -21,6 +21,10 @@ public class MainMenu : MonoBehaviour{
         SceneManager.LoadScene("LandPollutionCauses");
     }
 
+    public void StartAirPollutionMeasuresToCombat(){
+        SceneManager.LoadScene("SpaceInvadersGame");
+    }
+
 
 
     public void QuitGame(){
