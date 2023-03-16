@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Projectile : MonoBehaviour
 {
@@ -28,12 +29,18 @@ public class Projectile : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             Destroy(gameObject);
-
         }
 
         if(collision.gameObject.tag == "ProjectileBoundary")
         {
             Destroy(gameObject);
+        }
+        
+        //after destroying last SO3
+        if(collision.gameObject.tag == "lastWaste"){
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene("SpaceInv3");  
         }
 
     }

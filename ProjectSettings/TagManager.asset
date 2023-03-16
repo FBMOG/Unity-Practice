@@ -16,6 +16,7 @@ TagManager:
   - Paper
   - Metal
   - ProjectileBoundary
+  - lastWaste
   layers:
   - Default
   - TransparentFX

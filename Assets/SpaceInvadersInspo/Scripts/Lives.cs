@@ -9,6 +9,7 @@ public class Lives : MonoBehaviour
     public int lives = 3;
     public Image[] livesUI;
     public GameObject explosionPrefab;
+    public Canvas retryScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -43,9 +44,11 @@ public class Lives : MonoBehaviour
             }
 
             if(lives <= 0){
-                Destroy(gameObject);
-            }
 
+                retryScreen.gameObject.SetActive(true);
+                Destroy(gameObject);
+
+            }
         }
     }
 }
