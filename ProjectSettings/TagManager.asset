@@ -51,6 +51,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: fisherman
+    uniqueID: 1508289991
+    locked: 0
   - name: Background
     uniqueID: 1913852753
     locked: 0
