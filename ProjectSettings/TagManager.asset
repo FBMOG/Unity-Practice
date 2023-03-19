@@ -17,6 +17,8 @@ TagManager:
   - Metal
   - ProjectileBoundary
   - lastWaste
+  - NonEffect
+  - Effect
   layers:
   - Default
   - TransparentFX
