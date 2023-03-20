@@ -8,7 +8,7 @@ public class GrappleHead : MonoBehaviour
     {
         if (other.CompareTag("Trash"))
         {
-            Debug.Log("Hit Detected");
+            //Debug.Log("Hit Detected");
             other.transform.SetParent(transform);
             other.transform.localPosition = Vector3.zero;
         }
