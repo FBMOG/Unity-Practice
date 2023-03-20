@@ -22,7 +22,20 @@ public class MainMenu : MonoBehaviour{
     }
 
     public void StartAirPollutionMeasuresToCombat(){
+        SceneManager.LoadScene("SpaceInvadersStart");
+    }
+
+    public void StartAirPollutionMeasuresToCombatGame(){
         SceneManager.LoadScene("SpaceInvadersGame");
+    }
+
+    public void ShowMM1(){
+        SceneManager.LoadScene("MM1");
+    }
+
+    public void ShowMM2(){
+        Debug.Log("something");
+        SceneManager.LoadScene("MM2");
     }
 
 
