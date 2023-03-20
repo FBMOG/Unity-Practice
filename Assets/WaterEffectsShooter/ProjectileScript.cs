@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProjectileScript : MonoBehaviour
 {
     public float moveSpeed = 5;
     public GameObject explosionPrefab;
 
+    private PointManager pointManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
+
     }
 
     // Update is called once per frame
@@ -25,8 +29,17 @@ public class ProjectileScript : MonoBehaviour
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            pointManager.updateScore(50);
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "NonEffect")
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        
 
         if(collision.gameObject.tag == "Boundary")
         {
