@@ -10,6 +10,9 @@ public class PlayerLives : MonoBehaviour
     public Image[] livesUI;
     public GameObject explosionPrefab;
 
+    public Canvas gameOver;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,7 @@ public class PlayerLives : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.gameObject.tag == "Effect")
+        if(collision.collider.gameObject.tag == "Effect" || collision.collider.gameObject.tag == "LastEffect")
         {
             Destroy(collision.collider.gameObject);
 
@@ -43,14 +46,20 @@ public class PlayerLives : MonoBehaviour
 
             if(lives<=0){
                 Destroy(gameObject);
+                gameOver.gameObject.SetActive(true);
             }
             
 
         }
 
-        if(collision.collider.gameObject.tag == "NonEffect")
+
+        if(collision.collider.gameObject.tag == "NonEffect" ||collision.collider.gameObject.tag == "LastNonEffect" )
         {
             Destroy(collision.collider.gameObject);
+        }
+
+        if(collision.collider.gameObject.tag == "LastNonEffect"){
+
         }
 
     }

@@ -30,18 +30,28 @@ public class ProjectileScript : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             pointManager.updateScore(50);
+            pointManager.updateCorrect(1);
             Destroy(gameObject);
         }
 
-        if(collision.gameObject.tag == "NonEffect")
+        if(collision.gameObject.tag == "NonEffect" || collision.gameObject.tag == "LastNonEffect" )
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            pointManager.updateWrong(1);
             Destroy(gameObject);
+        }
+
+        if(collision.gameObject.tag == "LastEffect"){
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+            pointManager.updateScore(50);
+            pointManager.updateCorrect(1);
+            pointManager.GameOver();
         }
         
 
-        if(collision.gameObject.tag == "Boundary")
+        if(collision.gameObject.tag == "ProjectileBoundary")
         {
             Destroy(gameObject);
         }

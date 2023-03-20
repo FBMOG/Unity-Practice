@@ -19,6 +19,10 @@ TagManager:
   - lastWaste
   - NonEffect
   - Effect
+  - Enemy
+  - Bottom
+  - LastEffect
+  - LastNonEffect
   layers:
   - Default
   - TransparentFX

@@ -28,5 +28,10 @@ public class EnemyMovement : MonoBehaviour
             moveSpeed *= -1;
         }
 
+        if(collision.gameObject.tag == "Bottom")
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
