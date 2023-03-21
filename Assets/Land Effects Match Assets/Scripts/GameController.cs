@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
 
     private string firstGuessPuzzle, secondGuessPuzzle;
 
+    public Canvas endOfLevelCanvas;
+
     void Start(){
         GetButtons();
         AddListeners();
@@ -111,9 +113,9 @@ public class GameController : MonoBehaviour
     void CheckIfTheGameIsFinished(){
         countCorrectGuesses++;
 
+
         if(countCorrectGuesses == gameGuesses){
-            Debug.Log("Game Finished");
-            SceneManager.LoadScene("AirPollutionFlappyBird");
+            endOfLevelCanvas.gameObject.SetActive(true);
         }
     }
 

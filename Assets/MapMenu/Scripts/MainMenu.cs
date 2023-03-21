@@ -29,17 +29,34 @@ public class MainMenu : MonoBehaviour{
         SceneManager.LoadScene("SpaceInvadersGame");
     }
 
+    public void StartLandPollutionEffects(){
+        SceneManager.LoadScene("LandPollutionEffects");
+    }
+
+    public void StartLandCombatMethods(){
+        SceneManager.LoadScene("LandCombatMethods");
+    }
+
+    public void StartWaterPollutionEffects(){
+        SceneManager.LoadScene("WaterPollutionEffects");
+    }
+
+    public void StartWaterPollutionCombat(){
+        SceneManager.LoadScene("WaterPollutionCombat");
+    }
+
     public void ShowMM1(){
         SceneManager.LoadScene("MM1");
     }
 
     public void ShowMM2(){
-        Debug.Log("something");
         SceneManager.LoadScene("MM2");
     }
 
-
-
+    public void ShowMM3(){
+        SceneManager.LoadScene("MM3");
+    }
+    
     public void QuitGame(){
         
         Debug.Log("QUIT!");

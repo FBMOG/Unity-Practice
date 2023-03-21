@@ -5,12 +5,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
+
+
 {
     [SerializeField] private List<PuzzleSlot> slotPrefabs;
     [SerializeField] private PuzzlePiece _piecePrefab;
     [SerializeField] private Transform slotParent, pieceParent;
 
     private List<PuzzlePiece> spawnedPieces;
+    public Canvas endOfLevelCanvas;
 
     void Start(){
         Spawn();
@@ -35,8 +38,10 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
+
     void ChangeScene() {
         
-        SceneManager.LoadScene("LandPollutionEffects");
+        endOfLevelCanvas.gameObject.SetActive(true);
+
     }
 }

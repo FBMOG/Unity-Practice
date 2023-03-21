@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class TrashManager : MonoBehaviour
 {
     public GameObject[] gameObjects;
+    public Canvas endOfLevelCanvas;
 
     void Update()
     {
@@ -22,7 +23,7 @@ public class TrashManager : MonoBehaviour
 
         if (isAllNull)
         {
-            SceneManager.LoadScene("LandPollutionCauses");
+            endOfLevelCanvas.gameObject.SetActive(true);
         }
     }
 }
