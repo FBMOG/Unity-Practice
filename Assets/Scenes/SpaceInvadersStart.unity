@@ -242,8 +242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 631, y: -237}
-  m_SizeDelta: {x: 557.7728, y: 582.9714}
+  m_AnchoredPosition: {x: 643, y: -221}
+  m_SizeDelta: {x: 542.703, y: 501.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134856409
 MonoBehaviour:
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0d659147b794294e84b7abc92975c8e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f4e5f76b26a89243825d0952210efd9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.6603774, b: 0.14544977, a: 0.6156863}
+  m_Color: {r: 0.083214656, g: 0.09433961, b: 0.085664794, a: 0.8235294}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -855,8 +855,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 167}
-  m_SizeDelta: {x: 1278.1561, y: 172.9278}
+  m_AnchoredPosition: {x: 105, y: 185}
+  m_SizeDelta: {x: 1437.4647, y: 278.4158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1228690947
 MonoBehaviour:
@@ -878,8 +878,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "                   Here are some Main Air Pollutants\n                        
-    Destroy as many as you can!\n\tBut Be careful! They can damage your Ship!"
+  m_text: 'Here are the monsters that are polluting the air
+
+    Destroy as many
+    as you can with your ship weapons before they get to you!
+
+    But Be careful!
+    They can damage your Ship!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -906,7 +911,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.5
+  m_fontSize: 72
   m_fontSizeBase: 60.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -991,8 +996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24, y: -234}
-  m_SizeDelta: {x: 507.3759, y: 566.1724}
+  m_AnchoredPosition: {x: 16, y: -224}
+  m_SizeDelta: {x: 522.4456, y: 495.1293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275411043
 MonoBehaviour:
@@ -1014,7 +1019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc4b34cae6479a8459b0b1b57f15f834, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ac107d278f59284c8c7813d54704252, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1111,8 +1116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -616, y: -272}
-  m_SizeDelta: {x: 580.8716, y: 522.075}
+  m_AnchoredPosition: {x: -634, y: -192}
+  m_SizeDelta: {x: 514.1343, y: 440.2679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894633529
 MonoBehaviour:
@@ -1134,7 +1139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 172500c9f609b724988d39328f1ef0f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5668e877817e4bb40911109a5e46377c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

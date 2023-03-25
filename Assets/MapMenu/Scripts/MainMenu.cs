@@ -9,6 +9,10 @@ public class MainMenu : MonoBehaviour{
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void GoBackToMenu(){
+        SceneManager.LoadScene("StartMenu");
+    }
+
     public void StartAirPollutionCauses(){
         SceneManager.LoadScene("AirPollutionCauses");
     }
