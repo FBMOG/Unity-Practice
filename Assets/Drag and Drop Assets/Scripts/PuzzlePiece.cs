@@ -8,7 +8,7 @@ public class PuzzlePiece : MonoBehaviour
     private Vector3 offset;
     private Vector2 originalPostion;
     [SerializeField] private AudioSource _source;
-    [SerializeField] private AudioClip _pickupClip, _dropClip;
+    [SerializeField] private AudioClip _pickupClip, _dropClip, _errorClip;
     [SerializeField] private SpriteRenderer _renderer;
 
     private PuzzleSlot _currentSlot;
@@ -43,7 +43,7 @@ public class PuzzlePiece : MonoBehaviour
     
     void  OnMouseUp() {
 
-        if(Vector2.Distance(transform.position, _currentSlot.transform.position) < 3)
+        if(Vector2.Distance(transform.position, _currentSlot.transform.position) < 2)
         {
             transform.position = _currentSlot.transform.position;
             _currentSlot.Placed();
@@ -52,6 +52,7 @@ public class PuzzlePiece : MonoBehaviour
         else
         {
             transform.position = originalPostion;
+            _source.PlayOneShot(_errorClip);
         }
             
         
