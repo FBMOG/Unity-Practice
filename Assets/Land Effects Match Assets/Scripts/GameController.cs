@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField]
-    private Sprite bgImage;
+    [SerializeField] private Sprite bgImage;
+
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip _flipcard, _correctClip, _WrongClip;
 
     public Sprite[] puzzles;
     public List<Sprite> gamePuzzles = new List<Sprite>();
@@ -67,13 +69,14 @@ public class GameController : MonoBehaviour
         string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
         
         if(!firstGuess){
-
+             _source.PlayOneShot(_flipcard);
             firstGuess = true;
             firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
             firstGuessPuzzle = gamePuzzles[firstGuessIndex].name;
             btns[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];
 
         } else if (!secondGuess){
+             _source.PlayOneShot(_flipcard);
             secondGuess = true;
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
             secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
@@ -87,7 +90,9 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds (1f);
 
         if(firstGuessPuzzle == secondGuessPuzzle){
+             _source.PlayOneShot(_correctClip);
             yield return new WaitForSeconds (0.5f);
+
 
             btns[firstGuessIndex].interactable = false;
             btns[secondGuessIndex].interactable = false;
@@ -98,6 +103,7 @@ public class GameController : MonoBehaviour
 
             CheckIfTheGameIsFinished();
         } else {
+             _source.PlayOneShot(_WrongClip);
             yield return new WaitForSeconds (0.5f);
             btns[firstGuessIndex].image.sprite = bgImage;
             btns[secondGuessIndex].image.sprite = bgImage;
