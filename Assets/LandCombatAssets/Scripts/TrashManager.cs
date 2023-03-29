@@ -12,6 +12,7 @@ public class TrashManager : MonoBehaviour
     public TMP_Text counter;
     private int trashCounter = 0;
 
+
     void Update()
     {
         bool isAllNull = true;
@@ -29,6 +30,7 @@ public class TrashManager : MonoBehaviour
         if (isAllNull)
         {
             endOfLevelCanvas.gameObject.SetActive(true);
+            
         }
     }
 }

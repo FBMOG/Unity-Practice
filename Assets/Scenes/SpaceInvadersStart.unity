@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 134856408}
   - component: {fileID: 134856410}
   - component: {fileID: 134856409}
+  - component: {fileID: 134856411}
   m_Layer: 5
   m_Name: CO
   m_TagString: Untagged
@@ -283,6 +284,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134856407}
   m_CullTransparentMesh: 1
+--- !u!114 &134856411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134856407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05aef372d5ccf1c4b8a7893dde3b222c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amp: 14
+  freq: 5
 --- !u!1 &286317657
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5, y: 5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747613047
@@ -572,8 +587,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293388138
-  m_fontColor: {r: 0.41438237, g: 0.9056604, b: 0.9056604, a: 1}
+    rgba: 4278250720
+  m_fontColor: {r: 0.8768073, g: 0.9254902, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -590,8 +605,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 91.6
-  m_fontSizeBase: 91.6
+  m_fontSize: 84.39
+  m_fontSizeBase: 84.39
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -677,8 +692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39, y: 397}
-  m_SizeDelta: {x: 314.3412, y: 117.916}
+  m_AnchoredPosition: {x: 30, y: 426}
+  m_SizeDelta: {x: 488.1646, y: 160.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855489213
 MonoBehaviour:
@@ -761,15 +776,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.083214656, g: 0.09433961, b: 0.085664794, a: 0.8235294}
+  m_Color: {r: 0, g: 1, b: 0.11449838, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4d21e2d24f5042741b81fbaa0474ed5d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1123,8 +1138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 105, y: 185}
-  m_SizeDelta: {x: 1437.4647, y: 278.4158}
+  m_AnchoredPosition: {x: 1.6779, y: 184.50697}
+  m_SizeDelta: {x: 1825.3, y: 277.424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1228690947
 MonoBehaviour:
@@ -1152,7 +1167,10 @@ MonoBehaviour:
     as you can with your ship weapons before they get to you!
 
     But Be careful!
-    They can damage your Ship!'
+    They can damage your Ship!
+
+    Use SPACE Bar to Shoot and Arrow Keys (Left &
+    Right) to Steer your ship!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1174,12 +1192,12 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 93368250
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 54.4
   m_fontSizeBase: 60.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1240,6 +1258,7 @@ GameObject:
   - component: {fileID: 1275411042}
   - component: {fileID: 1275411044}
   - component: {fileID: 1275411043}
+  - component: {fileID: 1275411045}
   m_Layer: 5
   m_Name: Sulphur Dioxide
   m_TagString: Untagged
@@ -1305,6 +1324,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275411041}
   m_CullTransparentMesh: 1
+--- !u!114 &1275411045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275411041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05aef372d5ccf1c4b8a7893dde3b222c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amp: 14
+  freq: -5
 --- !u!1 &1697333217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1393,7 @@ GameObject:
   - component: {fileID: 1894633528}
   - component: {fileID: 1894633530}
   - component: {fileID: 1894633529}
+  - component: {fileID: 1894633531}
   m_Layer: 5
   m_Name: Ozone
   m_TagString: Untagged
@@ -1384,8 +1418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -634, y: -192}
-  m_SizeDelta: {x: 514.1343, y: 440.2679}
+  m_AnchoredPosition: {x: -633.7021, y: -224}
+  m_SizeDelta: {x: 504.0576, y: 495.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894633529
 MonoBehaviour:
@@ -1407,7 +1441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5668e877817e4bb40911109a5e46377c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e71b73044a3f536458e0042aa929158e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1425,6 +1459,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894633527}
   m_CullTransparentMesh: 1
+--- !u!114 &1894633531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894633527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05aef372d5ccf1c4b8a7893dde3b222c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amp: 14
+  freq: 5
 --- !u!1 &2009552181
 GameObject:
   m_ObjectHideFlags: 0
