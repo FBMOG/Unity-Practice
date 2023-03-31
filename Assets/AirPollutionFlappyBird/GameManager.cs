@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject instruct;
     public GameObject lostTxt;
     public GameObject gameOver;
+    public GameObject gameWin;
+    public GameObject gameWinTxt;
     public GameObject play;
+    [SerializeField] public AudioSource audioSource;
     public int score { get; private set; }
 
     private void Awake()
@@ -30,8 +33,10 @@ public class GameManager : MonoBehaviour
         replayButton.SetActive(false);
         instruct.SetActive(true);
         lostTxt.SetActive(false);
+        gameWinTxt.SetActive(false);
 
         Pause();
+        audioSource.Play();
     }
 
     public void Play()
@@ -41,10 +46,12 @@ public class GameManager : MonoBehaviour
 
         playButton.SetActive(false);
         gameOver.SetActive(false);
+        gameWin.SetActive(false);
         play.SetActive(false);
         replayButton.SetActive(false);
         instruct.SetActive(false);
         lostTxt.SetActive(false);
+        gameWinTxt.SetActive(false);
 
         Time.timeScale = 1f;
         player.enabled = true;
@@ -67,9 +74,24 @@ public class GameManager : MonoBehaviour
         Pause();
     }
 
+    public int PlayerScore(){
+        return score;
+    }
+
+
+    public void GameWin()
+    {
+        //playButton.SetActive(true);
+        replayButton.SetActive(true);
+        gameWin.SetActive(true);
+        gameWinTxt.SetActive(true);
+
+        Pause();
+    }
+
     public void Pause()
     {
-    
+        audioSource.Stop();
         Time.timeScale = 0f;
         player.enabled = false;
     }
@@ -98,7 +120,7 @@ public class GameManager : MonoBehaviour
         if (int.TryParse(currentScoreText, out currentScore))
         {
             // Do something with the score...
-            if (currentScore > 10 && currentScore <= 20)
+            if (currentScore > 2 && currentScore <= 4)
             {
                 for (int i = 0; i < pipes.Length; i++) {
                     pipes[i].setSpeed(6);
@@ -106,7 +128,7 @@ public class GameManager : MonoBehaviour
 
             }
                         // Do something with the score...
-            else if (currentScore > 20 && currentScore <= 30)
+            else if (currentScore > 4 && currentScore <= 6)
             {
                 for (int i = 0; i < pipes.Length; i++) {
                     pipes[i].setSpeed(8);
@@ -114,7 +136,7 @@ public class GameManager : MonoBehaviour
 
             }
             // Do something with the score...
-            else if (currentScore > 30 && currentScore <= 40)
+            else if (currentScore > 6 && currentScore <= 8)
             {
                 for (int i = 0; i < pipes.Length; i++) {
                     pipes[i].setSpeed(10);
@@ -122,24 +144,16 @@ public class GameManager : MonoBehaviour
 
             }
             // Do something with the score...
-            else if (currentScore > 40 && currentScore <= 50)
+            else if (currentScore > 8)
             {
                 for (int i = 0; i < pipes.Length; i++) {
                     pipes[i].setSpeed(12);
                 }
 
             }
-            // Do something with the score...
-            else if (currentScore > 50)
-            {
-                for (int i = 0; i < pipes.Length; i++) {
-                    pipes[i].setSpeed(15);
-                }
-
-            }
             else
             {
-                Debug.Log("Score is less than or equal to 10.");
+                Debug.Log("Score is less than or equal to 5.");
             }
         }
         else
