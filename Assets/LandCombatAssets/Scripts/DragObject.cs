@@ -5,6 +5,8 @@ using UnityEngine;
 public class DragObject : MonoBehaviour
 {
     private Vector3 originalPosition;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip _pickupClip, _dropClip, _errorClip;
 
     private void Start()
     {
@@ -13,6 +15,7 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseDown()
     {
+        _source.PlayOneShot(_pickupClip);
         GetComponent<SpriteRenderer>().sortingOrder = 1; // Bring sprite to the front
     }
 
@@ -34,7 +37,11 @@ public class DragObject : MonoBehaviour
         {
             if (collider.gameObject != gameObject && collider.gameObject.CompareTag(tag))
             {
-                Destroy(gameObject);
+                // _source.PlayOneShot(_dropClip);
+                // WaitForOneSecond();
+                // Destroy(gameObject);
+                // //gameObject.SetActive(false);
+                StartCoroutine(WaitAndDestroy(0.5f));
                 isColliding = true;
                 break;
             }
@@ -43,6 +50,14 @@ public class DragObject : MonoBehaviour
         if (!isColliding)
         {
             transform.position = originalPosition;
+            _source.PlayOneShot(_errorClip);
         }
+    }
+
+    private IEnumerator WaitAndDestroy(float waitTime)
+    {
+        _source.PlayOneShot(_dropClip);
+        yield return new WaitForSeconds(waitTime);
+        Destroy(gameObject);
     }
 }

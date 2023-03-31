@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private AudioSource _source;
     [SerializeField] private AudioClip _flipcard, _correctClip, _WrongClip;
 
+    public AudioSource audioSource;
+
     public Sprite[] puzzles;
     public List<Sprite> gamePuzzles = new List<Sprite>();
 

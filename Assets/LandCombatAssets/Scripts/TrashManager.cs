@@ -11,6 +11,7 @@ public class TrashManager : MonoBehaviour
     public Canvas endOfLevelCanvas;
     public TMP_Text counter;
     private int trashCounter = 0;
+    public AudioSource audioSource;
 
 
     void Update()
@@ -29,6 +30,7 @@ public class TrashManager : MonoBehaviour
 
         if (isAllNull)
         {
+            audioSource.Stop();
             endOfLevelCanvas.gameObject.SetActive(true);
             
         }

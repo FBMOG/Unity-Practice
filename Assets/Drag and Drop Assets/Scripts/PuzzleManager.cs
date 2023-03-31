@@ -11,6 +11,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private List<PuzzleSlot> slotPrefabs;
     [SerializeField] private PuzzlePiece _piecePrefab;
     [SerializeField] private Transform slotParent, pieceParent;
+    public AudioSource audioSource;
 
     private List<PuzzlePiece> spawnedPieces;
     public Canvas endOfLevelCanvas;
@@ -40,7 +41,7 @@ public class PuzzleManager : MonoBehaviour
 
 
     void ChangeScene() {
-        
+        audioSource.Stop();
         endOfLevelCanvas.gameObject.SetActive(true);
 
     }
