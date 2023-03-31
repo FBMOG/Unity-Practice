@@ -95,6 +95,15 @@ public class Grapple : MonoBehaviour
         if(grapple.transform.position.y >= startPosition.y){
             isShooting = false;
             isRetracting = false;
+           if (grapple.transform.childCount > 0)
+            {
+                GameObject childObject = grapple.transform.GetChild(0).gameObject;
+                if (childObject.CompareTag("Trash"))
+                {
+                    Destroy(childObject);
+                }
+            }
+
             grapple.transform.SetParent(boat.transform);
         }
         else{

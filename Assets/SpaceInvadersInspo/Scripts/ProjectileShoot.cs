@@ -10,6 +10,9 @@ public class ProjectileShoot : MonoBehaviour
     public float shootCDCurrent = 0.0f;
     private GameObject dummyProjectile;
 
+    [SerializeField] public AudioSource _bulletFire;
+    public AudioClip bulletSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,7 @@ public class ProjectileShoot : MonoBehaviour
         if(Input.GetButtonDown("Fire1") && shootReady)
         {
             dummyProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            _bulletFire.PlayOneShot(bulletSFX);
             shootCDCurrent = 0.0f;
             Destroy(dummyProjectile, 1.5f);
         }

@@ -11,6 +11,12 @@ public class Lives : MonoBehaviour
     public GameObject explosionPrefab;
     public Canvas retryScreen;
 
+    [SerializeField] public AudioSource _shipLossLife;
+    public AudioClip _shipLossLifeSFX;
+
+    [SerializeField] public AudioSource _shipDeath;
+    public AudioClip _shipDeathSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +36,7 @@ public class Lives : MonoBehaviour
             Destroy(collision.collider.gameObject);
 
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            _shipLossLife.PlayOneShot(_shipLossLifeSFX);
             lives-=1;
 
             for(int i = 0; i < livesUI.Length; i++){
@@ -44,6 +51,7 @@ public class Lives : MonoBehaviour
             }
 
             if(lives <= 0){
+                _shipDeath.PlayOneShot(_shipDeathSFX);
 
                 retryScreen.gameObject.SetActive(true);
                 Destroy(gameObject);

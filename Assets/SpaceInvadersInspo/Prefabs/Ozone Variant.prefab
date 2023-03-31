@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3636773460154239064, guid: 507225c63aee9ed4faa9ce2c127b351c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 172500c9f609b724988d39328f1ef0f5, type: 3}
+      objectReference: {fileID: 21300000, guid: 5668e877817e4bb40911109a5e46377c, type: 3}
     - target: {fileID: 3636773460154239065, guid: 507225c63aee9ed4faa9ce2c127b351c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -81,15 +81,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636773460154239067, guid: 507225c63aee9ed4faa9ce2c127b351c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.51
+      value: 3.27
       objectReference: {fileID: 0}
     - target: {fileID: 3636773460154239067, guid: 507225c63aee9ed4faa9ce2c127b351c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.32
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 3636773460154239070, guid: 507225c63aee9ed4faa9ce2c127b351c, type: 3}
       propertyPath: m_Name
-      value: Ozone
+      value: Ozone Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 507225c63aee9ed4faa9ce2c127b351c, type: 3}

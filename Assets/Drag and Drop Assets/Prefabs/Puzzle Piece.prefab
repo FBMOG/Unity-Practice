@@ -224,4 +224,5 @@ MonoBehaviour:
   _source: {fileID: 7319754482947041552}
   _pickupClip: {fileID: 8300000, guid: 421be97aefc47054282f3913a9dd8430, type: 3}
   _dropClip: {fileID: 8300000, guid: ab9858d67194e3d44b7ca49c03e300f5, type: 3}
+  _errorClip: {fileID: 8300000, guid: e4a62f1bdec71204d9706c437151b1ec, type: 3}
   _renderer: {fileID: 3215421617798749325}
