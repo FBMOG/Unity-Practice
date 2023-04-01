@@ -326,7 +326,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2cbcb2b86a2f89148b9c7d9023a051a1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.423
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1310,9 +1310,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f5b4cce3efac6b747b564706d4266c25, type: 3}
   - {fileID: 21300000, guid: 3a6a8dbbadc3744498cf3ade3f51cdf7, type: 3}
   - {fileID: 21300000, guid: 2ac5f2c6afd31164e8e2b2cbfcd3fb3a, type: 3}
-  _source: {fileID: 0}
-  _jump: {fileID: 0}
-  _dead: {fileID: 0}
+  _source: {fileID: 1780969511}
+  _jump: {fileID: 8300000, guid: b06900bd02f5bb344b46d6c698f1628f, type: 3}
+  _dead: {fileID: 8300000, guid: 3589dce7d636d4a4b9a1c0e60177f1ac, type: 3}
+  _scoreAdded: {fileID: 8300000, guid: ebb2953f0ef0e9745853bd7128acd163, type: 3}
+  _winner: {fileID: 8300000, guid: ab5b48191497e1949bb63958fa615123, type: 3}
 --- !u!58 &1780969507
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1428,8 +1430,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.31
   m_Pitch: 1
   Loop: 0
   Mute: 0
