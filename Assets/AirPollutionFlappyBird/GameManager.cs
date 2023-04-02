@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreText;
     public GameObject playButton;
     public GameObject replayButton;
+    public GameObject GoToNextGameButton;
     public GameObject instruct;
     public GameObject lostTxt;
     public GameObject gameOver;
@@ -82,11 +83,12 @@ public class GameManager : MonoBehaviour
     public void GameWin()
     {
         //playButton.SetActive(true);
-        replayButton.SetActive(true);
+        GoToNextGameButton.SetActive(true);
         gameWin.SetActive(true);
         gameWinTxt.SetActive(true);
 
         Pause();
+        
     }
 
     public void Pause()

@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour{
 
     public void StartGame (){
+        SceneManager.LoadScene("Start Menu");
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void GoBackToMenu(){
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("Start Menu");
     }
 
     public void StartAirPollutionCauses(){
@@ -22,11 +22,15 @@ public class MainMenu : MonoBehaviour{
         SceneManager.LoadScene("WaterPollutionQuiz");
     }
 
+    public void StartAirPollutionFlappyBird(){
+        SceneManager.LoadScene("AirPollutionFlappyBird");
+    }
+
     public void StartLandPollutionCauses(){
         SceneManager.LoadScene("LandPollutionCauses");
     }
 
-    public void StartAirPollutionMeasuresToCombat(){
+    public void StartSpaceInv1(){
         SceneManager.LoadScene("SpaceInvadersStart");
     }
 
@@ -60,6 +64,10 @@ public class MainMenu : MonoBehaviour{
 
     public void ShowMM3(){
         SceneManager.LoadScene("MM3");
+    }
+
+    public void ShowMM4(){
+        SceneManager.LoadScene("MM4");
     }
     
     public void QuitGame(){
