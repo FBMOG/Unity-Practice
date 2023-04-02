@@ -23,6 +23,8 @@ TagManager:
   - Bottom
   - LastEffect
   - LastNonEffect
+  - Grapple
+  - Fish
   layers:
   - Default
   - TransparentFX
