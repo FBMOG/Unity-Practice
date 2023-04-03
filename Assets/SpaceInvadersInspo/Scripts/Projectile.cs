@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Projectile : MonoBehaviour
 {
     public float moveSpeed = 5;
     public GameObject explosionPrefab;
+    [SerializeField] public AudioSource _bulletKillEnemy;
+    public AudioClip bulletKillSFX;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,17 +28,28 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if(collision.gameObject.tag == "Waste")
         {
+            
+            //_bulletKillEnemy.PlayOneShot(bulletKillSFX);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            
             Destroy(gameObject);
-
+            
         }
 
-        if(collision.gameObject.tag == "Boundary")
+        if(collision.gameObject.tag == "ProjectileBoundary")
         {
             Destroy(gameObject);
+        }
+        
+        //after destroying last SO3
+        if(collision.gameObject.tag == "lastWaste"){
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene("SpaceInv3");  
         }
 
     }

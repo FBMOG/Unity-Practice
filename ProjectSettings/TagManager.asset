@@ -15,6 +15,16 @@ TagManager:
   - Plastic
   - Paper
   - Metal
+  - ProjectileBoundary
+  - lastWaste
+  - NonEffect
+  - Effect
+  - Enemy
+  - Bottom
+  - LastEffect
+  - LastNonEffect
+  - Grapple
+  - Fish
   layers:
   - Default
   - TransparentFX
@@ -49,6 +59,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: fisherman
+    uniqueID: 1508289991
+    locked: 0
   - name: Background
     uniqueID: 1913852753
     locked: 0

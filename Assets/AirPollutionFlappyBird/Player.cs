@@ -13,10 +13,14 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
     private int spriteIndex;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip _jump, _dead, _scoreAdded, _winner;
+
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+   
     }
 
     private void Start()
@@ -28,6 +32,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive == true) {
+            _source.PlayOneShot(_jump);
             direction = Vector3.up * strength;
         }
 
@@ -59,10 +64,17 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Obstacle")) {
+            _source.PlayOneShot(_dead);
             FindObjectOfType<GameManager>().GameOver();
             birdIsAlive = false;
         } else if (other.gameObject.CompareTag("Scoring")) {
+            _source.PlayOneShot(_scoreAdded);
             FindObjectOfType<GameManager>().IncreaseScore();
+        }
+
+        if( FindObjectOfType<GameManager>().PlayerScore() >= 10){
+            _source.PlayOneShot(_winner);
+            FindObjectOfType<GameManager>().GameWin();
         }
     }
 

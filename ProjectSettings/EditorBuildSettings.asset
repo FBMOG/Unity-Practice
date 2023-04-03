@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Menu.unity
     guid: 2cb3111d2bd7ec14e84abdb03d796c0f
   - enabled: 1
+    path: Assets/Scenes/MM1.unity
+    guid: ba6f180b094b6294aa6e30c8186f821b
+  - enabled: 1
     path: Assets/Scenes/AirPollutionCauses.unity
     guid: b5df681c7b7de0044b9cbd610db01176
   - enabled: 1
@@ -23,4 +26,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LandPollutionEffects.unity
     guid: 2a0060eb688d60e428e7a1b1c5e4db50
+  - enabled: 1
+    path: Assets/Scenes/LandCombatMethods.unity
+    guid: 2520af0c69ef1854c940d619d64e6ac9
+  - enabled: 1
+    path: Assets/Scenes/SpaceInvadersStart.unity
+    guid: 2e0fe0cb52571ae4a924a3b0e23443cb
+  - enabled: 1
+    path: Assets/Scenes/SpaceInvadersGame.unity
+    guid: 645489de855167949a86765998365b6f
+  - enabled: 1
+    path: Assets/Scenes/SpaceInv3.unity
+    guid: 824c262da57c242439149006c7e92555
+  - enabled: 1
+    path: Assets/Scenes/MM2.unity
+    guid: f7e1461548855b64eb64cb1fa3930fba
+  - enabled: 1
+    path: Assets/Scenes/MM3.unity
+    guid: 7c615a9894194cb4099aac636bd01cc6
+  - enabled: 1
+    path: Assets/Scenes/WaterPollutionEffects.unity
+    guid: f704f2d78e44c684aa3a11b83818034f
+  - enabled: 1
+    path: Assets/Scenes/WaterPollutionCombat.unity
+    guid: 095fa686ad1d3de469d15c0c42ffa3f4
+  - enabled: 1
+    path: Assets/Scenes/MM4.unity
+    guid: be6da9d472556e94a9dba7fef3447e1b
   m_configObjects: {}
