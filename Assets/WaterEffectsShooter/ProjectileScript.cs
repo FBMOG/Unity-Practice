@@ -7,8 +7,8 @@ public class ProjectileScript : MonoBehaviour
 {
     public float moveSpeed = 5;
     public GameObject explosionPrefab;
-
     private PointManager pointManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,8 @@ public class ProjectileScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Effect")
         {
+
+            pointManager.playExplode();
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             pointManager.updateScore(50);

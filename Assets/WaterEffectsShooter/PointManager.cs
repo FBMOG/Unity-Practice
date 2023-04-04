@@ -19,6 +19,8 @@ public class PointManager : MonoBehaviour
     public GameObject game;
     public GameObject gameOver;
 
+    [SerializeField] public AudioSource audioSource1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,5 +61,9 @@ public class PointManager : MonoBehaviour
         gameOver.SetActive(true);
 
 
+    }
+
+    public void playExplode(){
+        audioSource1.Play();
     }
 }

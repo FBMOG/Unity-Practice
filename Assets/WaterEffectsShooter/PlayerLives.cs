@@ -10,6 +10,7 @@ public class PlayerLives : MonoBehaviour
     public Image[] livesUI;
     public GameObject explosionPrefab;
      private PointManager pointManager;
+     [SerializeField] public AudioSource audioSource1, audioSource2;
 
     public Canvas gameOver;
 
@@ -17,6 +18,7 @@ public class PlayerLives : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource2.Play();
         pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
     }
 
@@ -32,6 +34,7 @@ public class PlayerLives : MonoBehaviour
         {
             Destroy(collision.collider.gameObject);
 
+            pointManager.playExplode();
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             lives = lives -1;
             for(int i = 0; i < livesUI.Length; i++){
@@ -46,6 +49,8 @@ public class PlayerLives : MonoBehaviour
             }
 
             if(lives<=0){
+                audioSource2.Stop();
+                audioSource1.Play();
                 Destroy(gameObject); 
                 pointManager.GameOver();
                 gameOver.gameObject.SetActive(true);
@@ -57,6 +62,8 @@ public class PlayerLives : MonoBehaviour
 
         if(collision.collider.gameObject.tag =="LastEnemy" || collision.gameObject.tag == "LastEnemy")
         {
+                audioSource2.Stop();
+                audioSource1.Play();
                 Destroy(gameObject);
                 pointManager.GameOver();
                 gameOver.gameObject.SetActive(true);
