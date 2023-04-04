@@ -9,6 +9,7 @@ public class PlayerLives : MonoBehaviour
     public int lives = 3;
     public Image[] livesUI;
     public GameObject explosionPrefab;
+     private PointManager pointManager;
 
     public Canvas gameOver;
 
@@ -16,7 +17,7 @@ public class PlayerLives : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class PlayerLives : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.gameObject.tag == "Effect" || collision.collider.gameObject.tag == "LastEffect")
+        if(collision.collider.gameObject.tag == "NonEffect" || collision.collider.gameObject.tag == "Effect")
         {
             Destroy(collision.collider.gameObject);
 
@@ -45,22 +46,33 @@ public class PlayerLives : MonoBehaviour
             }
 
             if(lives<=0){
-                Destroy(gameObject);
+                Destroy(gameObject); 
+                pointManager.GameOver();
                 gameOver.gameObject.SetActive(true);
+               
             }
             
 
         }
 
-
-        if(collision.collider.gameObject.tag == "NonEffect" ||collision.collider.gameObject.tag == "LastNonEffect" )
+        if(collision.collider.gameObject.tag =="LastEnemy" || collision.gameObject.tag == "LastEnemy")
         {
-            Destroy(collision.collider.gameObject);
+                Destroy(gameObject);
+                pointManager.GameOver();
+                gameOver.gameObject.SetActive(true);
+                
+
         }
 
-        if(collision.collider.gameObject.tag == "LastNonEffect"){
 
-        }
+        // if(collision.collider.gameObject.tag == "NonEffect" ||collision.collider.gameObject.tag == "LastNonEffect" )
+        // {
+        //     Destroy(collision.collider.gameObject);
+        // }
+
+        // if(collision.collider.gameObject.tag == "LastNonEffect"){
+
+        // }
 
     }
     

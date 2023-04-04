@@ -15,23 +15,23 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+         transform.Translate(Vector2.down * moveSpeed * Time.deltaTime);
         
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if(collision.gameObject.tag == "Boundary")
-        {
-            transform.position = new Vector3 (transform.position.x, transform.position.y - 1, transform.position.z);
-            moveSpeed *= -1;
-        }
+        // if(collision.gameObject.tag == "Boundary")
+        // {
+        //     transform.position = new Vector3 (transform.position.x, transform.position.y - 1, transform.position.z);
+        //     moveSpeed *= -1;
+        // }
 
-        if(collision.gameObject.tag == "Bottom")
-        {
-            Destroy(gameObject);
-        }
+        // if(collision.gameObject.tag == "Bottom")
+        // {
+        //     Destroy(gameObject);
+        // }
 
     }
 }

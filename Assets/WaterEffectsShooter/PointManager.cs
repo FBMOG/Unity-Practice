@@ -50,12 +50,14 @@ public class PointManager : MonoBehaviour
     }
 
     public void GameOver(){
-        game.SetActive(false);
-        gameOver.SetActive(true);
-
+        
         finalscoreText.text = "Score: "+ score;
         finalwrongText.text = "Wrong Targets Shot: "+ wrong;
         finalcorrectText.text = "Correct Targets Shot: "+ correct;
-        
+
+        game.SetActive(false);
+        gameOver.SetActive(true);
+
+
     }
 }
