@@ -25,6 +25,7 @@ TagManager:
   - LastNonEffect
   - Grapple
   - Fish
+  - LastEnemy
   layers:
   - Default
   - TransparentFX

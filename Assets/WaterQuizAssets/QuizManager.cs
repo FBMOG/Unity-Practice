@@ -13,6 +13,8 @@ public class QuizManager : MonoBehaviour
     public TMP_Text QuestionText;
     public GameObject gameOverPanel;
     public GameObject quizPanel;
+    public GameObject startScreen;
+     [SerializeField] public AudioSource audioSource1, audioSource2, audioSource3, audioSource4, audioSource5, audioSource6;
 
     public TMP_Text ScoreText;
 
@@ -23,26 +25,44 @@ public class QuizManager : MonoBehaviour
 
 
     private void Start(){
+        audioSource1.Play();
         totalQuestions = QnA.Count;
+        
         gameOverPanel.SetActive(false);
+        quizPanel.SetActive(false);
+        startScreen.SetActive(true);
+
         generateQuestion();
 
 
 
     }
 
+    public void play(){
+        audioSource6.Play();
+        audioSource1.Stop();
+        audioSource2.Play();
+        startScreen.SetActive(false);
+        quizPanel.SetActive(true);
+    }
+
     public void retry(){
+        audioSource6.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
        
     }
 
+
     public void GameOver(){
+        audioSource2.Stop();
+        audioSource3.Play();
         quizPanel.SetActive(false);
         gameOverPanel.SetActive(true);
         ScoreText.text = "Score: " + score + "/" + totalQuestions;
     }
 
     public void correct(){
+        audioSource4.Play();
         score = score + 1;
         StartCoroutine(WaitForNext());
         QnA.RemoveAt(currentQuestion);
@@ -51,6 +71,7 @@ public class QuizManager : MonoBehaviour
 
     public void wrong(){
         //do something for wrong
+        audioSource5.Play();
         Debug.Log("Sorry, the correct answer is: "+ QnA[currentQuestion].correctAnswerString);
         StartCoroutine(WaitForNext());
         QnA.RemoveAt(currentQuestion);

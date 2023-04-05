@@ -7,8 +7,8 @@ public class ProjectileScript : MonoBehaviour
 {
     public float moveSpeed = 5;
     public GameObject explosionPrefab;
-
     private PointManager pointManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,8 @@ public class ProjectileScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Effect")
         {
+
+            pointManager.playExplode();
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             pointManager.updateScore(50);
@@ -34,21 +36,21 @@ public class ProjectileScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(collision.gameObject.tag == "NonEffect" || collision.gameObject.tag == "LastNonEffect" )
+        if(collision.gameObject.tag == "NonEffect" )
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
+            //Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            //Destroy(collision.gameObject);
             pointManager.updateWrong(1);
             Destroy(gameObject);
         }
 
-        if(collision.gameObject.tag == "LastEffect"){
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(collision.gameObject);
-            pointManager.updateScore(50);
-            pointManager.updateCorrect(1);
-            pointManager.GameOver();
-        }
+        // if(collision.gameObject.tag == "LastEffect"){
+        //     Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        //     Destroy(collision.gameObject);
+        //     pointManager.updateScore(50);
+        //     pointManager.updateCorrect(1);
+        //     pointManager.GameOver();
+        // }
         
 
         if(collision.gameObject.tag == "ProjectileBoundary")

@@ -19,6 +19,8 @@ public class PointManager : MonoBehaviour
     public GameObject game;
     public GameObject gameOver;
 
+    [SerializeField] public AudioSource audioSource1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,12 +52,18 @@ public class PointManager : MonoBehaviour
     }
 
     public void GameOver(){
-        game.SetActive(false);
-        gameOver.SetActive(true);
-
+        
         finalscoreText.text = "Score: "+ score;
         finalwrongText.text = "Wrong Targets Shot: "+ wrong;
         finalcorrectText.text = "Correct Targets Shot: "+ correct;
-        
+
+        game.SetActive(false);
+        gameOver.SetActive(true);
+
+
+    }
+
+    public void playExplode(){
+        audioSource1.Play();
     }
 }
