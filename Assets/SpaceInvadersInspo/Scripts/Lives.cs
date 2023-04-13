@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Lives : MonoBehaviour
 
@@ -57,6 +58,10 @@ public class Lives : MonoBehaviour
                 Destroy(gameObject);
 
             }
+        }
+
+        if(collision.collider.gameObject.tag == "END"){
+            SceneManager.LoadScene("SpaceInv3");
         }
     }
 }
