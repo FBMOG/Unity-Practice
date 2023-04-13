@@ -18,6 +18,8 @@ public class Grapple : MonoBehaviour
     [SerializeField] private AudioSource _source;
     [SerializeField] private AudioClip shoot;
 
+    [SerializeField] private AudioSource _source1;
+
     private GameObject grapple;        // The instantiated grapple game object
     private Vector3 startPosition;     // The start position of the grapple
     private bool isShooting, isRetracting;           // Whether the grapple is shooting or retracting
@@ -130,6 +132,7 @@ public class Grapple : MonoBehaviour
                     counter.text = "Fishes Remaining: " + FishCounter;
                     if(FishCounter == 0){
                         endOfLevelCanvas.gameObject.SetActive(true);
+                        _source1.Stop();
                     }
 
                 }
