@@ -24,6 +24,7 @@ public class Grapple : MonoBehaviour
     private Vector3 startPosition;     // The start position of the grapple
     private bool isShooting, isRetracting;           // Whether the grapple is shooting or retracting
     private LineRenderer lineRenderer; // The line renderer component of the grapple
+    private bool isFinished = false;
 
     private Vector3[] linePositions;   // The positions of the line renderer
     private int FishCounter = 10;
@@ -65,9 +66,12 @@ public class Grapple : MonoBehaviour
         if(isRetracting){
             MoveBackGrapple();
         }
+        
+        if(!isFinished){
+            timeRemaining -= Time.deltaTime; // Subtract the time passed since the last frame
+        }
 
-        timeRemaining -= Time.deltaTime; // Subtract the time passed since the last frame
-
+        
         if (timeRemaining < 0) // Stop the countdown when time runs out
         {
             timeRemaining = 0;
@@ -131,6 +135,7 @@ public class Grapple : MonoBehaviour
                     FishCounter --;
                     counter.text = "Fishes Remaining: " + FishCounter;
                     if(FishCounter == 0){
+                        isFinished = true;
                         endOfLevelCanvas.gameObject.SetActive(true);
                         _source1.Stop();
                     }
@@ -140,6 +145,7 @@ public class Grapple : MonoBehaviour
                     timeRemaining -= 5;
                     counter.text = "Fishes Remaining: " + FishCounter;
                     if(timeRemaining <= 0){
+                        
                         retry.gameObject.SetActive(true);
                     }
                 }
@@ -168,7 +174,7 @@ public class Grapple : MonoBehaviour
     }
 
     public void ResetGame(){
-        timeRemaining = 30;
+        timeRemaining = 60;
         FishCounter = 10;
     }
 
