@@ -40,7 +40,7 @@ Awesome Tuts - Anyone Can Learn To Make Games - https://www.youtube.com/@awesome
 
 
 Contact
-In the event that you have questions or feedback, you can contact me at samuelmahadeo91@gmail.com
+In the event that you have questions or feedback, you can contact us at samuelmahadeo91@gmail.com and raeanntbdavid@gmail.com
 
 Project Status
 The game is currently in alpha stages. For future work, the UI would be the firt to work on with custom made asstes to make the game look and feel better. 
